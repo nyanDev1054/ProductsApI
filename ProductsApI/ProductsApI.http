@@ -1,0 +1,31 @@
+@productApi_hostaddress = http://localhost:5000
+ 
+### Get all products
+GET {{productApi_hostaddress}}/api/products
+Accept: application/json
+ 
+### Get a product by ID
+GET {{productApi_hostaddress}}/api/products/1
+Accept: application/json
+ 
+### Create a new product
+POST {{productApi_hostaddress}}/api/products
+Content-Type: application/json
+ 
+{
+  "name": "New Product",
+  "price": 19.99
+}
+ 
+### Update an existing product
+PUT {{productApi_hostaddress}}/api/products/1
+Content-Type: application/json
+ 
+{
+  "id": 1,
+  "name": "Updated Product",
+  "price": 29.99
+}
+ 
+### Delete a product
+DELETE {{productApi_hostaddress}}/api/products/1
